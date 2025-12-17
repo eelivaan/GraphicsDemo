@@ -1,3 +1,5 @@
+// Highly inspired by https://learnopengl.com/PBR/Theory
+
 struct FMaterial
 {
     vec3 baseColor;
