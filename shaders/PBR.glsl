@@ -1,4 +1,6 @@
-// Highly inspired by https://learnopengl.com/PBR/Theory
+/*
+ * Highly inspired by https://learnopengl.com/PBR/Theory
+ */
 
 struct FMaterial
 {

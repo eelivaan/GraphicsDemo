@@ -5,7 +5,7 @@ import numpy as np
 
 class App(moderngl_window.WindowConfig):
     gl_version = (3, 3)
-    title = "Cellular Automata"
+    title = "Cellular Automata -- Click anywhere to start..."
     window_size = (600, 600)
     aspect_ratio = 1.0
     resizable = False

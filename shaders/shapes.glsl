@@ -1,4 +1,6 @@
-// source: https://iquilezles.org/articles/intersectors/
+/*
+ * Source: https://iquilezles.org/articles/intersectors/
+ */
 
 // Calcs intersection and exit distances, and normal at intersection.
 // The ray must be in box/object space. If you have multiple boxes all
