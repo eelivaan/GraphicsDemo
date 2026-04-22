@@ -1,6 +1,4 @@
-Some lightweight 3D-graphics demo applications made using Python and ModernGL.
-
-Originally made back in 2024, now published here for the purpose of backuping and showcasing alike.
+Some lightweight shader demo applications made using Python and ModernGL.
 
 Dependencies:
 ~~~bat
