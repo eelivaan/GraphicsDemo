@@ -14,8 +14,8 @@ class Test(mglw.WindowConfig):
     def __init__(self, **kwargs):
         super().__init__(**kwargs)
 
-        with open(os.path.join(__file__, "../shaders/raymarcher.vert")) as file_vert:
-            with open(os.path.join(__file__, "../shaders/raymarcher.frag")) as file_frag:
+        with open(os.path.join(__file__, "../shaders/screenquad.vert")) as file_vert:
+            with open(os.path.join(__file__, "../shaders/simple_raytrace.frag")) as file_frag:
                 self.prog = self.ctx.program(
                     vertex_shader = file_vert.read(),
                     fragment_shader = file_frag.read()
@@ -34,7 +34,7 @@ class Test(mglw.WindowConfig):
         self.vao = self.ctx.simple_vertex_array(self.prog, self.vbo, 'in_vert', mode = self.ctx.TRIANGLES)
         self.uniform_time = self.prog.get("time", 0.0);
 
-    def render(self, time, frame_time):
+    def on_render(self, time, frame_time):
         self.uniform_time.value = time;
         self.ctx.clear()
         self.vao.render()

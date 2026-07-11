@@ -18,7 +18,7 @@ class App(moderngl_window.WindowConfig):
 
         self.grid_resolution = (150, 150)
 
-        with open(os.path.join(__file__, "../shaders/raymarcher.vert")) as file_vert:
+        with open(os.path.join(__file__, "../shaders/screenquad.vert")) as file_vert:
             vertex_source = file_vert.read()
             with open(os.path.join(__file__, "../shaders/cellular_automata.frag")) as file_frag:
                 self.cellular_prog = self.ctx.program(
@@ -61,12 +61,12 @@ class App(moderngl_window.WindowConfig):
         self.mouse_event_queue = []
 
 
-    def mouse_press_event(self, x: int, y: int, button: int):
+    def on_mouse_press_event(self, x: int, y: int, button: int):
         self.mouse_event_queue.append((x,y,button))
-        return super().mouse_press_event(x, y, button)
+        return super().on_mouse_press_event(x, y, button)
 
 
-    def render(self, time, frame_time):
+    def on_render(self, time, frame_time):
         if (time > self.last_update_time+0.1):
             for x,y,button in self.mouse_event_queue:
                 grid_x = int(np.floor(x / self.wnd.size[0] * self.grid_resolution[0]))

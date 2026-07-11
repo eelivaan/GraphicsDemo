@@ -6,7 +6,7 @@ import numpy as np
 class Test(mglw.WindowConfig):
     gl_version = (3, 3)
     title = "Pathtracer"
-    window_size = (600, 600)
+    window_size = (800, 800)
     aspect_ratio = 1.0
     resizable = True
 
@@ -15,7 +15,7 @@ class Test(mglw.WindowConfig):
     def __init__(self, **kwargs):
         super().__init__(**kwargs)
 
-        with open(os.path.join(__file__, "../shaders/raymarcher.vert")) as file_vert:
+        with open(os.path.join(__file__, "../shaders/screenquad.vert")) as file_vert:
             with open(os.path.join(__file__, "../shaders/pathtracer.frag")) as file_frag:
                 with open(os.path.join(__file__, "../shaders/random.glsl")) as file_random:
                     with open(os.path.join(__file__, "../shaders/shapes.glsl")) as file_shapes:
@@ -56,7 +56,7 @@ class Test(mglw.WindowConfig):
         self.step = 0
 
 
-    def render(self, time, frame_time):        
+    def on_render(self, time, frame_time):        
         if self.step < self.num_steps:
             self.uniform_num_steps.value = self.num_steps
             self.uniform_iteration.value = self.step

@@ -1,9 +1,8 @@
-Some lightweight shader demo applications made using Python and ModernGL.
+Some lightweight shader demo applications made using Python and ModernGL (OpenGL wrapper for Python). 
 
 Dependencies:
 ~~~bat
-pip install moderngl
-pip install moderngl-window
+pip install moderngl moderngl-window
 ~~~
 
 <img width="400" alt="kuva" src="https://github.com/user-attachments/assets/e3c7526a-7717-476d-8467-fa16e58f7a54" />

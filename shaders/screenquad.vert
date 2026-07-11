@@ -1,6 +1,6 @@
 #version 460
 
-in vec2 in_vert;
+layout (location = 0) in vec2 in_vert;
 
 out vec2 normalized_coords;
 
