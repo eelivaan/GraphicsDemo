@@ -1,7 +1,7 @@
 Some lightweight shader demo applications made using Python and ModernGL (OpenGL wrapper for Python). 
-Also a c++ implementation of the same functionality is found under /c-source for comparison.
+Also an implementation using OpenGL c-API is found under /c-source for comparison.
 
-Dependencies:
+Python Dependencies:
 ~~~bat
 pip install moderngl moderngl-window
 ~~~
